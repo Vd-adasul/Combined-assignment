@@ -8,5 +8,11 @@ Hint - use Date class exposed in JS
 */
 
 function calculateTime(n) {
-    return 0.01;
+    const timestamp = Date.now()
+    let final = 0;
+    for(let i =0; i<n; i++){
+        final+=i;
+    }
+    const ret = Date.now()-timestamp;
+    return ret;
 }

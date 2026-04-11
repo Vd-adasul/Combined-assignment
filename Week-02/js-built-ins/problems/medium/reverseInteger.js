@@ -23,6 +23,24 @@
 
 function reverseInteger(num) {
   // Your code here
+  
+  let str = num.toString();
+  let i = 0; 
+  let final =""
+  if(str[0]=="-"){
+    i =1;
+    final = "-"
+  }else{
+    i=0;
+    final = ""
+  }
+
+  for(let m = str.length-1; m>=i; m--){
+    final+=str[m];
+  }
+  return Number(final)
+
+
 }
 
 module.exports = reverseInteger;

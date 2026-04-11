@@ -21,6 +21,15 @@
 
 function countOccurrences(arr) {
   // Your code here
+  let final = {};
+  for(let item of arr){
+    if(!final[item]){
+      final[item]=1;
+    }else{
+      final[item]+=1;
+    }
+  }
+  return final;
 }
 
 module.exports = countOccurrences;

@@ -22,5 +22,20 @@
 */
 function nonrepeat(str) {
   // Your code here
+  let uni = []; 
+  let rep =[];
+  for(let i =0; i<str.length;i++){
+    if(!uni.includes(str[i]) && !rep.includes(str[i])){
+      uni.push(str[i]);
+    }
+    else if(rep.includes(str[i])) {
+      continue;
+    }else if(uni.includes(str[i])){
+      rep.push(str[i]);
+      uni.pop(str[i]);
+    }
+  } 
+
+  return uni[0];
 }
 module.exports = nonrepeat;

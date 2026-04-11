@@ -7,6 +7,16 @@
 
 function countVowels(str) {
     // Your code here
+
+    let arr1  = ['a', 'e', 'i', 'o', 'u','A', 'E', 'I', 'O', 'U'];
+    let final =0;
+    for(let i of str){
+        if(arr1.includes(i)){
+            final+=1
+        }
+    }
+
+    return final;
 }
 
 module.exports = countVowels;

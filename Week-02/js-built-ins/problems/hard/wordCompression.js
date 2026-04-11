@@ -23,7 +23,32 @@
 
 
 function compressWords(arr) {
+  if (arr.length === 0) return [];
   // Your code here
+  let final = [];
+  let curr = arr[0];
+  let count = 0;
+  for(let item of arr){
+    if(item==curr){
+      count+=1;
+      continue ;
+    }else{
+      if(count==1){
+        final.push(curr);
+      }else{
+        final.push(curr+count)
+      }
+      count=1;
+      curr = item;
+      continue
+    }
+  }
+  if (count === 1) {
+    final.push(curr);
+  } else {
+    final.push(curr + count);
+  }
+  return final; 
 }
 
 

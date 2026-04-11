@@ -12,7 +12,36 @@
 */
 
 class Todo {
+  constructor(){
+    this.lis_todo = {};
+    this.curr = 1;
+  }
+  
+  add(todo){
+    this.lis_todo[this.curr] = todo;
+    this.curr+=1;
+  }
 
+  remove(indexOfTodo){
+    if(this.lis_todo[indexOfTodo]){
+      this.lis_todo[indexOfTodo] ="";
+    }
+  }
+  update(index,updatedTodo){
+    if(this.lis_todo[index]){
+      this.lis_todo[index] = updatedTodo;
+    }
+  }
+  getAll(){
+    return this.lis_todo;
+  }
+  get(indexOfTodo){
+    return this.lis_todo[indexOfTodo];
+  }
+  clear(){
+    this.lis_todo = {};
+    this.curr =0;
+  }
 }
 
 module.exports = Todo;

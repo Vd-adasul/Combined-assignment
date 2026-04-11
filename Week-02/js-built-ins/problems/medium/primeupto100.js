@@ -14,9 +14,22 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-prime`
 */
-
+function pc(num){
+  if(num==1) return false;
+  for(let i =2; i<num; i++){
+    if(num%i===0){
+      return false 
+    }
+  }
+  return true;
+}
 function getPrimesUpTo100() {
   // Your code here
+  let final = [];
+  for(let i =1; i<100; i++){
+     if(pc(i)) final.push(i);
+  }
+  return final;
 }
 
 module.exports = { getPrimesUpTo100 };

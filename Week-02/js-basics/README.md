@@ -1,7 +1,5 @@
-# JS-Basics
+this assignment has like 40 questions
 
-For beginners looking to build a strong foundation in JavaScript, check out this JavaScript Basics [Roadmap](https://whimsical.com/js-basics-roadmap-HxsoYtVkawZbjC1gcy61Cc).
+this is where one can find it https://github.com/100xdevs-bootcamp-1/JavaScript-Assignments/tree/main/js-basics
 
-Js array and object assignments: [Here](https://brindle-goal-102.notion.site/QUESTIONS-FOR-JS-WEEKEND-26d46b36b2e980a0b299fbf0d87840af) *[Need to know Object.keys , .values , .entries as well]*
-
-
+specifically here https://brindle-goal-102.notion.site/QUESTIONS-FOR-JS-WEEKEND-26d46b36b2e980a0b299fbf0d87840af

@@ -1,6 +1,6 @@
 /*
   Implement a class `Calculator` having below methods
-    - initialise a result variable in the constructor and keep updating it after every arithmetic operation
+    - initialise a result variabtle in the consructor and keep updating it after every arithmetic operation
     - add: takes a number and adds it to the result
     - subtract: takes a number and subtracts it from the result
     - multiply: takes a number and multiply it to the result
@@ -17,6 +17,33 @@
   - `npm run test-calculator`
 */
 
-class Calculator { }
+class Calculator { 
+  construtor(){
+    this.result =0;
+  }
+
+  add(n){
+    this.result+=n;
+  }
+
+  subtract(n){
+    this.result-=n;
+  }
+  multiply(n){
+    this.result*=n;
+  }
+  divide(n){
+    this.result/=n;
+  }
+  clear(n){
+    this.result =0;
+  }
+  getResult(){
+    return this.result;
+  }
+  calculate(expression){
+     try
+  }
+}
 
 module.exports = Calculator;
