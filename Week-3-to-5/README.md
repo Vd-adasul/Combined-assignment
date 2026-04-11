@@ -28,8 +28,8 @@ Assignments are now organized by topic and then by difficulty:
 
 ## Running Tests
 
-### For All Assignments
-1. Navigate to `/Week-3to5/`.
+### For Hard-Level Assignments
+1. Navigate to `/Advanced-Javascript-Assignments/async-js-patterns`.
 2. Install dependencies using:
    ```sh
    npm install
@@ -40,7 +40,7 @@ Assignments are now organized by topic and then by difficulty:
    ```
    Example:
    ```sh
-   npm run retryOnce
+   npm run processLargeArray
    ```
 4. To execute all tests at once, run:
    ```sh
