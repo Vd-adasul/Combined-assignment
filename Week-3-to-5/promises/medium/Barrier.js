@@ -10,9 +10,15 @@
 // If wait() is called after the barrier is already open,
 // it should resolve immediately.
 
+
+
 class Barrier {
-  constructor() { }
-  wait() { }
+  constructor() { 
+    this.barrier = false;
+  }
+  wait() { 
+    return Promise
+  }
   open() { }
 }
 

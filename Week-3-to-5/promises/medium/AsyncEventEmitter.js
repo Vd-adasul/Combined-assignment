@@ -12,7 +12,20 @@
 
 
 class AsyncEventEmitter {
-  constructor() { }
+  constructor() { 
+    this.repo ={}; 
+  }
+
+  on(event, listener){
+    if(!this.repo[event]){
+      this.repo[event] = []
+    }
+
+    this.repo[event].push(listener);
+  }
+  emit(event, data){
+    Promise.allSettled(data)
+  }
 }
 
 module.exports = AsyncEventEmitter;

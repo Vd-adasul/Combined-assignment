@@ -13,7 +13,7 @@ Your task is to create a TODO backend using the Node.js core `http` module. You 
 2. **`GET /todos`**
    - Returns the list of all created Todos in JSON format.
 
-3. **`GET /todo?id=XXX`**
+3.   **`GET /todo?id=XXX`**
    - Returns a single Todo object matching the numeric `id` provided in the query parameters.
    - If no Todo is found for the given `id`, it should respond with a `404` status code and the JSON body `{"error": "Todo not found"}`.
 

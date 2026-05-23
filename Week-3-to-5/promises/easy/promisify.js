@@ -11,7 +11,15 @@
 // // 2. Reject if callback gets an error
 
 function promisify(fn) {
-
+    return async function(...args){
+        fn((err,result)=>{
+            if(err){
+                throw err
+            }else{
+                return result;
+            }
+        })
+    }
 }
 
 module.exports = promisify;

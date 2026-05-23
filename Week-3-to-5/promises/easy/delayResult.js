@@ -7,9 +7,12 @@
 // // The function must return a Promise that resolves with the given value
 // // only after ms milliseconds.
 
-
-function delayResult(value, ms) {
-
+function delay(ms){
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+async function delayResult(value, ms) {
+    await delay(ms); 
+    return value;
 }
 
 module.exports = delayResult;

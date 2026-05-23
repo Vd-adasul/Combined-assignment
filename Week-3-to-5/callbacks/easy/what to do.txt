@@ -1,0 +1,3 @@
+1. we are supposed to make a function which gets url, ms, callback 
+make a function(fetcher) takes input as the url and returns some data form that url.
+now Promise.race them, if err then .catch, if works .then((data)=>callback(null, data))

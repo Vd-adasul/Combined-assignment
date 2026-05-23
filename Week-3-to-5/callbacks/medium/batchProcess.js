@@ -12,6 +12,47 @@
 // - Start new work as soon as one finishes.
 // - Stop and return an error if any task fails.
 
-function batchProcess(items, limit, worker, onComplete) {}
+function parallelBatch(items, limit, worker, finalCb) {
+
+    let results = [];
+    let index = 0;
+    let running = 0;
+    let finished = 0;
+    let failed = false;
+
+    function launchNext() {
+
+        if (failed) return;
+
+        while (running < limit && index < items.length) {
+
+            const currentIndex = index++;
+            running++;
+
+            worker(items[currentIndex], (err, result) => {
+
+                if (failed) return;
+                
+                if (err) {
+                    failed = true;
+                    return finalCb(err);
+                }
+
+                results[currentIndex] = result;
+
+                running--;
+                finished++;
+
+                if (finished === items.length) {
+                    return finalCb(null, results);
+                }
+
+                launchNext();
+            });
+        }
+    }
+
+    launchNext();
+}
 
 module.exports = batchProcess;

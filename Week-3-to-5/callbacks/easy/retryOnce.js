@@ -7,7 +7,13 @@
 
 
 function retryOnce(fn) {
-
+    return async function(...args){
+        try{
+            return await fn(...args)
+        }catch(err){
+            return await fn(...args)
+        }
+    }
 }
 
 module.exports = retryOnce;

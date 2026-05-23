@@ -7,6 +7,14 @@
 // If the I/O operation does not complete within the specified number
 // of milliseconds, the returned promise should reject with a "Timeout" error.
 
-async function ioWithTimeout(fn, ms) {}
+async function ioWithTimeout(fn, ms) {
+    let result = await Promise.race([
+        fn(), 
+        delay(ms).then(()=>{ 
+            throw new Error ("Timeout")
+        })
+    ])
+    return result;
+}
 
 module.exports = ioWithTimeout;

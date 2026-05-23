@@ -6,3 +6,13 @@
 //  - HH:MM::SS (Eg. 13:45:23)
 
 //  - HH:MM::SS AM/PM (Eg 01:45:23 PM)
+
+// let time = new Date().toLocaleTimeString()
+// console.log(time);
+
+function actual(){
+    let time = new Date().toISOString()
+    console.log(time);
+};
+
+setInterval(actual, 1000);
